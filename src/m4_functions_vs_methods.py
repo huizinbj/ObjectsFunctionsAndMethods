@@ -76,13 +76,16 @@ def main():
     #   Second number: bigger means slower.
     window.tracer(1, 1)
 
+    try_methods_and_functions()
+    try_functions()
+
     jump_and_move_turtle(100, 50, 200, -100)
     turtle = rg.SimpleTurtle('square')
     draw_many_squares(turtle, 3, 75, 15)
     turtle3()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
-
+    try_methods()
 
     window.close_on_mouse_click()
 
@@ -172,11 +175,17 @@ def try_methods():
       -- backward  100 units
     """
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
+    brett = rg.SimpleTurtle()
+    brett.pen = rg.Pen('brown', 5)
 
+    brett.forward(150)
+    brett.left(90)
+    brett.forward(50)
+    brett.backward(100)
 
 def try_functions():
     """
@@ -186,7 +195,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -197,7 +206,9 @@ def try_functions():
     # HINT: see   jump_and_move_turtle   above.
     #
     ####################################################################
-
+    jump_and_move_turtle(200,100,300,30)
+    jump_and_move_turtle(100,200,0,0)
+    jump_and_move_turtle(-50,50,100,100)
 
 def try_methods_and_functions():
     """
@@ -232,7 +243,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -242,6 +253,22 @@ def try_methods_and_functions():
     # function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ####################################################################
+    david = rg.SimpleTurtle()
+    david.pen =rg.Pen('blue', 5)
+    david.backward(150)
+    david.speed = 1
+    draw_many_squares(david,2,100,30)
+    david.speed = 5
+    david.pen = rg.Pen('red',5)
+    draw_many_squares(david,10,50,15)
+    david.speed = 100
+    david.pen = rg.Pen('red', 35)
+    draw_many_squares(david,8,300,60)
+    david.pen = rg.Pen('black',3)
+    david.backward(200)
+    david.draw_circle(30)
+    david.draw_square(50)
+
 
 
 # ----------------------------------------------------------------------
