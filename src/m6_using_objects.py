@@ -15,7 +15,8 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     #two_circles()
-    circle_and_rectangle()
+    #circle_and_rectangle()
+    lines()
 def two_circles():
     """
     -- Constructs an rg.RoseWindow.
@@ -84,7 +85,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -147,8 +148,29 @@ def lines():
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     # ------------------------------------------------------------------
+    newwindow = rg.RoseWindow(700,700)
+
+    Q = rg.Point(200,200)
+    P = rg.Point(400,400)
+    B = rg.Point(150,75)
+    A = rg.Point(300,150)
 
 
+    line1 = rg.Line(Q,P)
+    line2 = rg.Line(B,A)
+
+    line1.attach_to(newwindow)
+    line2.attach_to(newwindow)
+
+    print(line1.get_midpoint())
+    print(line1.get_midpoint().x)
+    print(line1.get_midpoint().y)
+
+    print(line2.get_midpoint())
+    print(line2.get_midpoint().x)
+    print(line2.get_midpoint().y)
+
+    newwindow.close_on_mouse_click()
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
