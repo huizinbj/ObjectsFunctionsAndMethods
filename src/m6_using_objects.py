@@ -113,7 +113,12 @@ def circle_and_rectangle():
     print(center_point.x)
     print(center_point.y)
 
-    print()
+    print(1)
+    print(rectangle.fill_color)
+    print(rectangle.get_center())
+    print(rectangle.get_center().x)
+    print(rectangle.get_center().y)
+
     window.close_on_mouse_click()
 
 
